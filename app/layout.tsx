@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s - Manish J",
   },
   description:
-    "Founder, Technical Consultant, and Journeyman—pursuing diverse interests beyond apprenticeship. Building distributed systems, learning guitar, collecting comics.",
+    "Founder and independent consultant with expertise spanning design patterns to systems architecture—monolithic, serverless, and distributed computing. Building large-scale data pipelines and solving AI problems.",
 };
 
 export default function RootLayout({

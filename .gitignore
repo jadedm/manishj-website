@@ -17,6 +17,14 @@
 /.next/
 /out/
 
+# terraform
+infra/.terraform/
+infra/.terraform.lock.hcl
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/*.tfvars
+infra/.terraform.tfstate.lock.info
+
 # production
 /build
 
@@ -24,6 +32,7 @@
 .DS_Store
 *.pem
 CLAUDE.md
+archive/
 
 # debug
 npm-debug.log*
