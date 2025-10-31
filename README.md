@@ -129,15 +129,28 @@ export const projects: Project[] = [
 
 ## Deployment
 
-### AWS Amplify
+### AWS S3 + CloudFront
 
-The project is configured for AWS Amplify deployment:
+The project is configured for static deployment to AWS:
 
-- Build config in `amplify.yml`
-- Uses `output: 'standalone'` in `next.config.ts`
-- Automatic detection and deployment from repository
+- **Infrastructure:** Terraform in `infra/` directory
+- **Deployment:** Automated script in `scripts/deploy.sh`
+- **Static Export:** Next.js `output: 'export'` mode
+- **Region:** S3 in ap-south-1, CloudFront global
 
-Connect your repository to AWS Amplify and it will automatically detect the configuration.
+**Quick Deploy:**
+```bash
+# 1. Setup infrastructure
+cd infra
+terraform init
+terraform apply
+
+# 2. Deploy site
+cd ..
+./scripts/deploy.sh
+```
+
+See `DEPLOYMENT.md` for complete deployment guide and `infra/README.md` for infrastructure details.
 
 ## License
 

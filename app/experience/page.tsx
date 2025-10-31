@@ -1,19 +1,32 @@
 export const metadata = {
   title: "Experience",
-  description: "11+ years of software engineering experience",
+  description:
+    "12 years from design patterns to systems architecture across monolithic, serverless, and distributed computing",
 };
 
 export default function ExperiencePage() {
   return (
     <div className="container max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
       <div className="mb-10 animate-slide-down">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
-          Experience
-        </h1>
-        <p className="text-muted-foreground">
-          11+ years of software engineering, specializing in backend development
-          and distributed systems
-        </p>
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <div className="flex-1">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
+              Experience
+            </h1>
+            <p className="text-muted-foreground">
+              12 years of software engineering, from design patterns to systems
+              design across monolithic, serverless, and distributed
+              architectures
+            </p>
+          </div>
+          <a
+            href="/manish_jadhav_resume.pdf"
+            download
+            className="flex-shrink-0 px-4 py-2 text-sm border border-border rounded-lg hover:bg-secondary/50 transition-colors"
+          >
+            Download Resume
+          </a>
+        </div>
       </div>
 
       <div className="space-y-12 animate-fade-in animate-delay-200">
@@ -24,6 +37,56 @@ export default function ExperiencePage() {
           </h2>
 
           <div className="space-y-8">
+            {/* hyphn & Independent Consulting */}
+            <div className="border-l-2 border-border pl-4">
+              <div className="mb-2">
+                <h3 className="font-semibold text-lg">
+                  Founder & Independent Consultant
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  HyphnTech | Independent Consultant
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  May 2024 - Present | Remote
+                </p>
+              </div>
+              <p className="text-muted-foreground mb-3">
+                Building my own startup and consulting independently on data
+                engineering and AI projects. Focusing on execution over
+                perfection with consistent, iterative delivery.
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex gap-2">
+                  <span className="text-foreground">•</span>
+                  <span>
+                    Building large-scale data pipelines for processing and
+                    transforming data at scale
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-foreground">•</span>
+                  <span>
+                    Solving AI/ML integration challenges for companies, from
+                    proof of concept to production deployment
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-foreground">•</span>
+                  <span>
+                    Architecting solutions across monolithic, serverless, and
+                    distributed computing patterns based on project needs
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-foreground">•</span>
+                  <span>
+                    Applying lessons learned from perfectionism—shipping early,
+                    iterating often, and prioritizing consistency over intensity
+                  </span>
+                </li>
+              </ul>
+            </div>
+
             {/* Saavi Softwares */}
             <div className="border-l-2 border-border pl-4">
               <div className="mb-2">
@@ -32,42 +95,41 @@ export default function ExperiencePage() {
                   Saavi Softwares Private Limited
                 </p>
                 <p className="text-muted-foreground text-sm">
-                  June 2022 - Present | Pune, India
+                  June 2022 - May 2024 | Pune, India
                 </p>
               </div>
               <p className="text-muted-foreground mb-3">
-                Utilizing Node.js for server-side development and React for
-                building scalable frontend applications. Cloud-native
-                application development using AWS.
+                Built cloud-native applications on AWS with Node.js and React.
+                Worked across serverless and distributed architectures.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Implemented state machine-based workflows to replace
-                    traditional long-running servers, enhancing efficiency and
+                    Replaced traditional long-running servers with state
+                    machine-based workflows, improving efficiency and
                     scalability
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Developing solutions utilizing AWS databases, with a
-                    specialization in DynamoDB
+                    Built solutions with AWS databases, specializing in DynamoDB
+                    for high-performance applications
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Demonstrated understanding of cloud reference architectures
-                    following AWS best practices
+                    Designed cloud architectures following AWS best practices
+                    and reference patterns
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Strong emphasis on code documentation to ensure clarity,
-                    maintainability, and collaboration within the team
+                    Maintained comprehensive code documentation for team
+                    collaboration and long-term maintainability
                   </span>
                 </li>
               </ul>
@@ -88,45 +150,36 @@ export default function ExperiencePage() {
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Developed design documents and Proof of Concepts (POCs)
-                    utilizing diverse technologies tailored to consumer use
-                    cases
+                    Created design documents and POCs for diverse consumer use
+                    cases, evaluating technologies for product fit
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Familiarity with principles of scalable architecture,
-                    including monolithic, microservices, etc.
+                    Built and maintained features across multiple Node.js
+                    microservices in a distributed ecosystem
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Responsible for building and maintaining features across
-                    multiple microservices within the ecosystem (Node.js)
+                    Implemented event sourcing patterns and event-driven
+                    architecture using RabbitMQ
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Well-versed in event sourcing patterns and event-driven
-                    architecture, ensuring alignment with project requirements
-                    (RabbitMQ)
+                    Applied JavaScript and TypeScript design patterns for
+                    scalable, maintainable codebases
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Continuously enhanced expertise in JavaScript and TypeScript
-                    design patterns to facilitate scalable coding practices
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-foreground">•</span>
-                  <span>
-                    Experienced with Docker and deployment processes, ensuring
-                    smooth and efficient application deployment
+                    Containerized applications with Docker and managed
+                    deployment pipelines
                   </span>
                 </li>
               </ul>
@@ -147,46 +200,43 @@ export default function ExperiencePage() {
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Developed robust APIs with clean, well-documented code to
-                    ensure clarity and ease of integration
+                    Built robust APIs with clean, well-documented code for easy
+                    integration and maintenance
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Integrated backend Node.js APIs seamlessly with React
-                    frontend applications to deliver cohesive user experiences
+                    Integrated Node.js backend APIs with React frontends to
+                    deliver cohesive user experiences
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Demonstrated expertise in fundamental design principles
-                    crucial for building scalable applications
+                    Applied fundamental design principles for building scalable
+                    applications from the ground up
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Proficient in asynchronous programming paradigms,
-                    addressing challenges effectively to ensure smooth
-                    application flow
+                    Mastered asynchronous programming patterns for smooth
+                    application flow and performance
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Proficient in writing comprehensive unit tests for both
-                    React and Node.js using Jest, Mocha, and Chai
+                    Wrote comprehensive unit tests for React and Node.js using
+                    Jest, Mocha, and Chai
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    Managed end-to-end project lifecycle, ranging from
-                    conceptualization to delivery, encompassing landing page
-                    design, application development, and full-fledged
-                    e-commerce solutions
+                    Managed full project lifecycle from concept to
+                    delivery—landing pages, web apps, and e-commerce solutions
                   </span>
                 </li>
               </ul>
@@ -204,32 +254,29 @@ export default function ExperiencePage() {
                 </p>
               </div>
               <p className="text-muted-foreground mb-3 text-sm">
-                Conducted literature research and spearheaded the development of
-                innovative assistive technologies, including:
+                Conducted research and developed assistive technologies for
+                accessibility, including:
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    <strong>Subtitle Editor:</strong> Designed and implemented
-                    a user-friendly subtitle editor enabling users to edit
-                    existing subtitles or create new ones
+                    <strong>Subtitle Editor:</strong> Built a user-friendly
+                    editor for creating and modifying video subtitles
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    <strong>Plugin/Tween Engine:</strong> Developed a versatile
-                    plugin/tween engine to seamlessly integrate effects into
-                    subtitles
+                    <strong>Plugin/Tween Engine:</strong> Created a plugin
+                    engine to integrate visual effects into subtitles
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-foreground">•</span>
                   <span>
-                    <strong>Accessible Video Player:</strong> Engineered an
-                    accessible video player tailored specifically for deaf
-                    individuals
+                    <strong>Accessible Video Player:</strong> Designed a video
+                    player tailored for deaf users
                   </span>
                 </li>
               </ul>

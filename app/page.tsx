@@ -20,10 +20,24 @@ export default async function Home() {
             striving toward mastery in some.
           </p>
           <p>
-            With 13 years building distributed systems, I&apos;ve learned to
-            pick the right tool for the job. When I&apos;m not coding,
-            you&apos;ll find me learning guitar, collecting DC comics, or on the
-            badminton court.
+            With 12 years of experience—from learning design patterns to
+            architecting systems spanning monolithic, serverless, and
+            distributed computing—I&apos;m now building my own startup and
+            consulting independently. These days, I focus on large-scale data
+            pipelines and solving AI problems for companies.
+          </p>
+          <p>
+            When I&apos;m not coding, you&apos;ll find me exploring music,
+            reading comics and compelling stories, or playing sports.
+          </p>
+          <p>
+            If you want to know more about my professional journey, {""}
+            <a
+              href="/experience"
+              className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors"
+            >
+              View my traditional resume
+            </a>
           </p>
         </div>
       </section>

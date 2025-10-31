@@ -1,6 +1,6 @@
 export const metadata = {
   title: "About",
-  description: "Founder, Technical Consultant, and Journeyman of Some",
+  description: "Founder & Independent Consultant - Journeyman of Some",
 };
 
 export default function AboutPage() {
@@ -11,34 +11,54 @@ export default function AboutPage() {
           About
         </h1>
         <p className="text-muted-foreground">
-          Founder, Technical Consultant, and Journeyman of Some
+          Founder & Independent Consultant - Journeyman of Some
         </p>
       </div>
 
       <div className="prose animate-fade-in animate-delay-200">
         <p>
-          You've heard the expression "jack of all trades, master of none"? Well,
-          I'm kind of in the middle. I have a number of diverse interests that
-          I've pursued to a level beyond an apprenticeship but has not yet reached
-          (and will likely never reach) mastery.
+          You&apos;ve heard the expression &quot;jack of all trades, master of
+          none&quot;? Well, I&apos;m kind of in the middle. I have a number of
+          diverse interests that I&apos;ve pursued to a level beyond an
+          apprenticeship but has not yet reached (and will likely never reach)
+          mastery.
         </p>
 
         <p>
-          I'm not a jack of all trades. I'm not a master of none.{" "}
-          <strong>I'm a journeyman of some.</strong>
+          I&apos;m not a jack of all trades. I&apos;m not a master of none.{" "}
+          <strong>I&apos;m a journeyman of some.</strong>
         </p>
 
         <h2>What I Do</h2>
         <p>
-          I'm the founder of <strong>HyphTech</strong> and work as a technical
-          consultant. With 13 years of coding experience, I've built everything
-          from simple WordPress sites to complex distributed systems.
+          I&apos;m building my own startup, hyphn, and working as an independent
+          consultant. With 12 years of experience, I&apos;ve spent years learning
+          design patterns to solve low-level code challenges and understanding
+          systems design across monolithic, serverless, and distributed architectures.
+          These days, most of my work revolves around building large-scale data
+          pipelines and solving AI problems for companies.
         </p>
 
         <p>
           My philosophy? Pick the right tool for the job, not the tool I know
           best. I prioritize shipping features over perfect architecture, while
-          maintaining clean, maintainable code with good documentation and testing.
+          maintaining clean, maintainable code with good documentation and
+          testing.
+        </p>
+
+        <h2>Lessons Learned</h2>
+        <p>
+          For years, perfectionism held me back. I&apos;d obsess over architecture,
+          refactor endlessly, and delay shipping until everything felt &quot;just
+          right.&quot; The result? Burnout, missed opportunities, and projects that
+          never saw the light of day.
+        </p>
+        <p>
+          Now, I focus on <strong>consistency over intensity</strong> and{" "}
+          <strong>execution over perfection</strong>. Ship early, iterate often,
+          and learn from real-world feedback. Small, consistent progress beats
+          sporadic bursts of &quot;perfect&quot; work every time. Done is better
+          than perfect.
         </p>
 
         <h2>Technical Expertise</h2>
@@ -51,24 +71,31 @@ export default function AboutPage() {
             <strong>Cloud:</strong> AWS (primary), Azure, Google Cloud Platform
           </li>
           <li>
-            <strong>Architecture:</strong> Distributed systems, Microservices,
-            Event-driven architectures
+            <strong>Architecture:</strong> Monolithic, Serverless, Distributed computing,
+            Data pipelines, Microservices, Event-driven
+          </li>
+          <li>
+            <strong>Current Focus:</strong> Large-scale data engineering, AI/ML
+            integration, Cloud-native solutions
           </li>
         </ul>
 
         <h2>Journey</h2>
         <p>
-          I started as a WordPress freelancer in 2012 and evolved into building
-          complex distributed systems. Previously, I led the engineering team at
-          Saavi Softwares. Now I run my own startup and consult on technical
-          projects.
+          My career started at the University of Glasgow in 2012 working on
+          assistive technologies for accessibility. I then spent 7+ years at
+          MarketingMuggles, growing from building landing pages to architecting
+          full-stack applications. At Excellerate, I dove deep into microservices
+          and event-driven architectures. At Saavi Softwares, I focused on
+          cloud-native solutions spanning serverless and distributed computing on AWS.
+          In May 2024, I started my own journey—building hyphn and consulting independently.
         </p>
 
         <h2>Beyond Code</h2>
         <p>
-          When I'm not in front of a screen, you'll find me learning guitar,
-          diving into music theory, collecting DC Universe comics, or playing
-          badminton, football, or cricket.
+          When I&apos;m not in front of a screen, I&apos;m exploring music,
+          reading comics and compelling stories across genres, or staying active
+          through sports.
         </p>
 
         <h2>Currently Learning</h2>
@@ -78,10 +105,10 @@ export default function AboutPage() {
           <li>Consulting skills</li>
         </ul>
 
-        <h2>Let's Connect</h2>
+        <h2>Let&apos;s Connect</h2>
         <p>
-          I'm always interested in discussing technology, startups, or even music
-          and comics. Feel free to reach out!
+          I&apos;m always interested in discussing technology, startups, or even
+          music and comics. Feel free to reach out!
         </p>
       </div>
     </div>
