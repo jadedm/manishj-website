@@ -62,10 +62,10 @@ export default function RootLayout({
                   </Link>
                   <div className="hidden md:flex items-center gap-4 text-sm">
                     <Link
-                      href="/blog"
+                      href="/garden"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      blog
+                      garden
                     </Link>
                     <span className="text-muted-foreground">/</span>
                     <Link
