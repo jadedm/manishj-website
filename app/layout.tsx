@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileNav } from "@/components/mobile-nav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,7 +51,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
-            <header className="border-b border-border">
+            <header className="border-b border-border relative">
               <nav className="container max-w-3xl mx-auto px-4 sm:px-6 py-4">
                 <div className="flex justify-between items-center">
                   <Link
@@ -59,7 +60,7 @@ export default function RootLayout({
                   >
                     Manish J
                   </Link>
-                  <div className="flex items-center gap-4 text-sm">
+                  <div className="hidden md:flex items-center gap-4 text-sm">
                     <Link
                       href="/blog"
                       className="text-muted-foreground hover:text-foreground transition-colors"
@@ -88,6 +89,7 @@ export default function RootLayout({
                       about
                     </Link>
                   </div>
+                  <MobileNav />
                 </div>
               </nav>
             </header>
