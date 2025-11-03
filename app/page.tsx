@@ -1,10 +1,16 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/posts";
+import { getAllNotes } from "@/lib/garden";
 import { getRecentProjects } from "@/lib/projects";
 import { ChevronRight, ExternalLink, Github } from "lucide-react";
 
+const stageEmoji = {
+  evergreen: "🌳",
+  budding: "🌿",
+  seedling: "🌱",
+};
+
 export default async function Home() {
-  const recentPosts = (await getAllPosts()).slice(0, 5);
+  const recentNotes = (await getAllNotes()).slice(0, 5);
   const recentProjects = getRecentProjects(3);
 
   return (
@@ -15,9 +21,14 @@ export default async function Home() {
         </h1>
         <div className="prose-custom space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            Not a jack of all trades. Not a master of none. I&apos;m a
-            journeyman—pursuing diverse interests beyond apprenticeship,
-            striving toward mastery in some.
+            You&apos;ve heard the expression &quot;jack of all trades, master of none&quot;?
+            Well, I&apos;m somewhere in between. I have diverse interests I&apos;ve
+            pursued beyond apprenticeship, though I&apos;ll likely never reach mastery
+            in all of them.
+          </p>
+          <p>
+            I&apos;m not a jack of all trades. I&apos;m not a master of none.
+            I&apos;m a journeyman of some.
           </p>
           <p>
             With 12 years of experience—from learning design patterns to
@@ -44,32 +55,37 @@ export default async function Home() {
 
       <section className="mb-16 animate-fade-in animate-delay-200">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl font-semibold tracking-tight">Latest posts</h2>
+          <h2 className="text-xl font-semibold tracking-tight">
+            Recently tended
+          </h2>
           <Link
-            href="/blog"
+            href="/garden"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            See all posts
+            Explore garden
           </Link>
         </div>
 
         <div className="space-y-3">
-          {recentPosts.map((post, index) => (
+          {recentNotes.map((note, index) => (
             <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
+              key={note.slug}
+              href={`/garden/${note.slug}`}
               className={`block border border-border rounded-lg p-4 hover:bg-secondary/50 transition-colors group animate-slide-up animate-delay-${
                 (index + 3) * 100
               }`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-medium mb-1 group-hover:text-muted-foreground transition-colors">
-                    {post.title}
-                  </h3>
-                  {post.excerpt && (
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-base">{stageEmoji[note.stage]}</span>
+                    <h3 className="font-medium group-hover:text-muted-foreground transition-colors">
+                      {note.title}
+                    </h3>
+                  </div>
+                  {note.excerpt && (
                     <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
-                      {post.excerpt}
+                      {note.excerpt}
                     </p>
                   )}
                 </div>
@@ -103,9 +119,7 @@ export default async function Home() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-medium mb-1">
-                    {project.title}
-                  </h3>
+                  <h3 className="font-medium mb-1">{project.title}</h3>
                   <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed mb-3">
                     {project.description}
                   </p>
@@ -113,8 +127,16 @@ export default async function Home() {
                     {project.demoUrl && (
                       <Link
                         href={project.demoUrl}
-                        target={project.demoUrl.startsWith('http') ? "_blank" : undefined}
-                        rel={project.demoUrl.startsWith('http') ? "noopener noreferrer" : undefined}
+                        target={
+                          project.demoUrl.startsWith("http")
+                            ? "_blank"
+                            : undefined
+                        }
+                        rel={
+                          project.demoUrl.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 bg-foreground text-background rounded-md hover:bg-foreground/90 transition-colors"
                       >
                         <ExternalLink className="h-3 w-3" />
@@ -140,7 +162,45 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="animate-fade-in animate-delay-400">
+      <section className="mb-16 animate-fade-in animate-delay-400">
+        <h2 className="text-xl font-semibold tracking-tight mb-6">
+          Companies I&apos;m working with
+        </h2>
+        <p className="text-muted-foreground leading-relaxed mb-6">
+          I&apos;ve had the privilege of working with innovative companies
+          solving interesting problems.
+        </p>
+        <div className="flex flex-wrap gap-2 text-sm">
+          <Link
+            href="https://hyphn.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+          >
+            Hyphn
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <Link
+            href="https://inoltro.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+          >
+            Inoltro
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <Link
+            href="https://juvo.work/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+          >
+            Juvo
+          </Link>
+        </div>
+      </section>
+
+      <section className="animate-fade-in animate-delay-500">
         <h2 className="text-xl font-semibold tracking-tight mb-6">
           Let&apos;s Connect
         </h2>

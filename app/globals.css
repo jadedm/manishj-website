@@ -302,4 +302,32 @@
     margin-bottom: 2rem;
     border-color: var(--color-border);
   }
+
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose thead {
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .prose th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-foreground);
+  }
+
+  .prose td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-foreground);
+  }
+
+  .prose tbody tr:last-child td {
+    border-bottom: none;
+  }
 }

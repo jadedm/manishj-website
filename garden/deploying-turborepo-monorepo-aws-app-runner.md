@@ -1,6 +1,8 @@
 ---
 title: "Deploying a Turborepo Monorepo to AWS App Runner: A Complete Guide"
 date: "2025-10-27"
+stage: "evergreen"
+tags: ["aws", "turborepo", "deployment", "nextjs", "nestjs"]
 excerpt: "From Amplify failures to App Runner success: Our journey deploying multiple Next.js frontends and a NestJS backend"
 ---
 
