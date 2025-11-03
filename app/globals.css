@@ -81,6 +81,10 @@
     border-color: var(--color-border);
   }
 
+  .bg-background {
+    background-color: var(--color-background);
+  }
+
   .bg-secondary {
     background-color: var(--color-secondary);
   }

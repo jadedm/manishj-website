@@ -25,7 +25,7 @@ export function MobileNav() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-background border-b border-border md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg md:hidden z-50">
           <nav className="container max-w-3xl mx-auto px-4 py-3">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
@@ -33,7 +33,7 @@ export function MobileNav() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                  className="text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors py-2 px-2 rounded-md"
                 >
                   {item.label}
                 </Link>
