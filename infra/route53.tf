@@ -20,7 +20,7 @@ resource "aws_route53_record" "apex" {
   }
 }
 
-# A record for www subdomain (ALIAS to CloudFront)
+# A record for www subdomain (ALIAS to CloudFront, will redirect to non-www)
 resource "aws_route53_record" "www" {
   zone_id = aws_route53_zone.main.zone_id
   name    = "www.${var.domain_name}"

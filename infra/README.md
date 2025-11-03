@@ -5,9 +5,10 @@ This directory contains Terraform configuration for deploying the website to AWS
 ## Architecture
 
 - **S3 Bucket** (ap-south-1): Stores static website files
-- **CloudFront** (Global): CDN for fast content delivery
-- **ACM Certificate** (us-east-1): SSL/TLS certificate for HTTPS
-- **Route 53**: DNS management for custom domain
+- **CloudFront** (Global): CDN for fast content delivery with www→non-www redirect
+- **CloudFront Function**: Redirects www.manishj.com to manishj.com (301)
+- **ACM Certificate** (us-east-1): SSL/TLS certificate for HTTPS (covers both apex and www)
+- **Route 53**: DNS management for custom domain (apex + www subdomain)
 
 ## Prerequisites
 
@@ -47,8 +48,9 @@ terraform apply
 This will create:
 - S3 bucket in ap-south-1
 - CloudFront distribution (global)
-- ACM certificate in us-east-1 (required for CloudFront)
-- Route 53 hosted zone and DNS records
+- CloudFront function for www→non-www redirect
+- ACM certificate in us-east-1 (covers manishj.com and www.manishj.com)
+- Route 53 hosted zone and DNS records (A records for apex and www)
 
 ### 4. Update Domain Nameservers
 
@@ -82,9 +84,12 @@ cd ..
 **Monthly (~$1-5):**
 - S3 Storage: ~$0.50
 - CloudFront: First 50GB free, then $0.085/GB
+- CloudFront Functions: FREE (first 2M invocations/month, then $0.10/1M)
 - Route 53: $0.50/hosted zone
 - ACM Certificate: FREE
 - Data Transfer: ~$1-3
+
+**For a personal portfolio site, CloudFront Functions will be $0/month** (well within the 2M free tier).
 
 ## Useful Commands
 
@@ -121,6 +126,19 @@ provider "aws" {
 ### S3 in ap-south-1
 
 Your S3 bucket is in ap-south-1 as requested. CloudFront will cache content globally at edge locations, so your Indian audience will still get fast load times.
+
+### WWW to Non-WWW Redirect
+
+The CloudFront Function intercepts requests to `www.manishj.com` and issues a 301 permanent redirect to `manishj.com`. This happens at the edge before hitting the origin, so it's fast and SEO-friendly.
+
+**How it works:**
+1. User visits `www.manishj.com`
+2. CloudFront Function runs on viewer-request event
+3. Function detects `www.` prefix in hostname
+4. Returns 301 redirect to `https://manishj.com/path`
+5. Browser redirects to non-www version
+
+Both domains (apex and www) are covered by the same ACM certificate and CloudFront distribution for seamless HTTPS.
 
 ## Troubleshooting
 
